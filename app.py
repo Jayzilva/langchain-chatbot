@@ -135,20 +135,7 @@ with st.sidebar:
         help="1 = Brief, 5 = Comprehensive"
     )
 
-# Main area
-st.markdown("<h1 class='main-header'>Your Personal Learning Mentor</h1>", unsafe_allow_html=True)
 
-# Introduction
-if not st.session_state.chat_history:
-    st.markdown("""
-    <div class='answer-container'>
-    <p>👋 Welcome! I'm your personal learning mentor. I'm here to help you navigate through your curriculum, 
-    explain concepts, provide examples, and guide your learning journey.</p>
-    
-    <p>You can ask me questions about any topic in the curriculum, request practice exercises, 
-    or seek clarification on concepts you find challenging.</p>
-    </div>
-    """, unsafe_allow_html=True)
 
 # Chat input
 user_input = st.text_input("What would you like to learn today?", key="user_input", value=st.session_state.question)
